@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    function $Dojo(id) {
+    this.myId = document.getElementById(id);
+    // The above gets the element by ID so it
+    // does not need to be typed out every time
+
+    this.click = function (callback) {
+        this.myId.addEventListener("click", callback);
+    };
+    // This creates automatic functionality for clicking
+    // wherever the ID is
+
+    this.hover = function (hoverin, hoverout) {
+        this.myId.addEventListener("mouseover", hoverin);
+        this.myId.addEventListener("mouseout", hoverout);
+    };
+    // This creates automatic functionality for hovering
+    // wherever the ID is
+
+    return this;
+}
+    </script>
+    <style type="text/css">
+    #findName {
+      width: 70%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+    <
+    </div>
+  </body>
+</html>

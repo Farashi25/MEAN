@@ -1,0 +1,56 @@
+!DOCTYPE html
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script type="text/javascript">
+        var _ = {
+            reduce: function(arr, cb, index) {
+                var x = 0;
+                if(!index){
+                    index = arr[0];
+                }
+                for (var i = x; i< arr.length; i++){
+                    let result = cb(arr[i], index);
+                }
+                return index;
+            },
+            find: function(arr, cb) {
+                for(var i=0; i< arr.length; i++){
+                    let result = cb(arr[i]);
+                    if (result == true){
+                        return arr[i];
+                    }
+                }
+            },
+            filter: function(arr, cb) {
+                new_arr = [];
+                for(var i = 0; i<arr.length; i++){
+                    let result = cb(arr[i]);
+                    if (result == true){
+                        new_arr.push(arr[i]);
+                    }
+                }
+                return new_arr;
+            },
+            reject: function(arr, cb) {
+                new_arr =[];
+                for(var i =0; i<arr.length; i++){
+                    let result = cb(arr[i]);
+                    if (result == false){
+                        new_arr.push(arr[i]);
+                    }
+                }
+                }
+            }
+        _.reduce([3,4,6,9,10], function(memo, val){return memo+ val}, 0)
+        _.filter([0,4,5], function(val){ return val > 0 })
+        _.find([0,2,5,3], function(val){ return val == 5})
+        _.reject([6,7,3,2], function(val){ return val < 6})
+// you just created a library with 5 methods!
+        </script>
+    </head>
+  <body>
+
+  </body>
+</html>
